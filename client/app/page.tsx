@@ -2,6 +2,7 @@ import { BsBell, BsBookmark, BsEnvelope, BsTwitter } from "react-icons/bs";
 import { BiHash, BiHomeCircle, BiMoney, BiUser } from "react-icons/bi";
 import { SlOptions } from "react-icons/sl";
 import Link from "next/link";
+import FeedCard from "@/components/FeedCard";
 
 interface TwitterSidebarButton {
   title: string;
@@ -90,8 +91,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="col-span-6 border-r-[1px] border-l-[1px] border-gray-400"></div>
-        <div className="col-span-3"></div>
+        <div className="col-span-5 border-r-[1px] border-l-[1px] border-gray-600 overflow-y-scroll no-scrollbar">
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+          <FeedCard />
+        </div>
+        <div className="col-span-4"></div>
       </div>
     </div>
   );
